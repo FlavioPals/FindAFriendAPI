@@ -4,6 +4,7 @@
   "description": "- [] Deve ser possível cadastrar um pet\r - [] Deve ser possível listar todos os pets disponíveis para adoção em uma cidade\r - [] Deve ser possível filtrar pets por suas características\r - [] Deve ser possível visualizar detalhes de um pet para adoção\r - [] Deve ser possível se cadastrar como uma ORG\r - [] Deve ser possível realizar login como uma ORG",
   "main": "index.js",
   "scripts": {
+    "dev": "tsx watch ./src/server.ts ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,8 @@
     "fastify": "^4.13.0",
     "tsup": "^6.6.3",
     "tsx": "^3.12.3",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "dotenv": "16.0.3",
+    "zod": "3.20.6"
   }
 }
