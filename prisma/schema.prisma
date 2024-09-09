@@ -10,10 +10,29 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    String @id @default(uuid())
-  name  String
-  email String @unique
+model Pet {
+  id           String  @id @default(uuid())
+  name         String?
+  description  String?
+  age          String?
+  size         String
+  energy_level String?
+  org_id       String
 
-  @@map("users")
+  org Org @relation(fields: [org_id], references: [id])
+
+  @@map("pets")
+}
+
+model Org {
+  id       String @id @default(uuid())
+  name     String
+  email    String @unique
+  whatsapp String
+  password String
+  state    String
+  city     String
+  pets     Pet[]
+
+  @@map("orgs")
 }
