@@ -1,11 +1,6 @@
 import fastify from "fastify";
 import { PrismaClient } from "@prisma/client";
+import {z} from 'zod'
 
 export const app = fastify();
 const prisma = new PrismaClient();
-prisma.user.create({
-    data:{
-        name: 'John Doe',
-        email: 'zq6gA@example.com',
-    }
-})

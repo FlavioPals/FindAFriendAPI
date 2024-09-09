@@ -19,7 +19,9 @@ model Pet {
   energy_level String?
   org_id       String
 
-  org Org @relation(fields: [org_id], references: [id])
+  org    Org     @relation(fields: [org_id], references: [id])
+  User   User?   @relation(fields: [userId], references: [id])
+  userId String?
 
   @@map("pets")
 }
@@ -35,4 +37,12 @@ model Org {
   pets     Pet[]
 
   @@map("orgs")
+}
+
+model User {
+  id       String @id @default(uuid())
+  name     String
+  email    String @unique
+  password String
+  pets     Pet[]
 }
