@@ -2,6 +2,7 @@
 
 ### Regras da aplicação
 
+- [ ] Deve ser possível cadastrar um usuario
 - [ ] Deve ser possível cadastrar um pet
 - [ ] Deve ser possível listar todos os pets disponíveis para adoção em uma cidade
 - [ ] Deve ser possível filtrar pets por suas características
