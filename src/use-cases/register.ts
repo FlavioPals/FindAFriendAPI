@@ -1,6 +1,5 @@
 import { hash } from "bcryptjs"
-import { prisma } from "../lib/prisma"
-import { PrismaUsersRepository } from "../repositories/prisma/prisma-users-repository"
+
 import { UsersRepository } from "../repositories/users-repository"
 import { UserAlreadyExistsError } from "../errors/user-already-exists"
 import { User } from "@prisma/client"
